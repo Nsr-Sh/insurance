@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insurance calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Start -->
+    <div class="container">
+      <div class="row">
+        <!-- main box -->
+        <div id="main">
+          <!-- title -->
+          <div class="title">
+            <h1>Car insurance calculator</h1>
+          </div>
+          <!-- box Content -->
+          <div class="content">
+            <!-- car type selector -->
+            <div class="first-row">
+              <label for="cartype">select your car model:</label>
+              <select class="selector" id="cartype">
+                <!-- car models -->
+                <option value="">-Select Your car-</option>
+                <option value="">Pride</option>
+                <option value="1">Proche</option>
+                <option value="2">Ferari</option>
+                <option value="3">Lamborgini</option>
+              </select>
+            </div>
+            <!-- Date of manufacture of the car -->
+            <div class="second-row">
+              <label for="year">Select car year:</label>
+              <select class="selector"></select>
+              <!-- Add date with javaScript to year selector -->
+            </div>
+            <!-- Choose insurance type -->
+            <div class="second-row">
+              <div class="row">
+                <label for="level">level</label>
+                <div class="level-selector">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="level"
+                      value="basic"
+                      checked
+                    />
+                    Basic
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="level"
+                      value="complete"
+                    />
+                    Complete
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

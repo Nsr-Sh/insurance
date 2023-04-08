@@ -1,0 +1,28 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+#main {
+    margin: 0 auto;
+    background-color: red;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  background-color: antiquewhite;
+  padding: 8px;
+  font-weight: bolder;
+  color: #898989;
+}
+
+.title h1 {
+font-size: 30px;
+}
