@@ -24,11 +24,11 @@
             <div id="main">
               <div id="model" class="row select">
                 <label for="select-model">Car model</label>
-                <select name="" id="select-model">
+                <select name="" onChange="changeImage(this);">
+                  <option value="bmw">BMW</option>
+                  <option value="lamborghini">lamborghini</option>
+                  <option value="porsche">porsche</option>
                   <option value="pride">Pride</option>
-                  <option value="">Pride</option>
-                  <option value="">Pride</option>
-                  <option value="">Pride</option>
                 </select>
               </div>
               <div id="year" class="row select">
@@ -68,7 +68,7 @@
         </form>
         <div id="image">
           <!-- <h1>Car insurance calculator</h1> -->
-          <img src="assets/images/1-2-car-png-picture.png" alt=""></div>
+          <img src="assets/images/bmw.png" alt="" id="car-img"></div>
     </div>
 
   
