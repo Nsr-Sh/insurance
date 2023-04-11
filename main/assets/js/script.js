@@ -33,7 +33,7 @@ function insertDate(length) {
   rangeArray.forEach((item) => {
     html += `<option value="${item}">${item}</option>`;
   });
-  selectYear.insertAdjacentHTML("beforeEnd", html);
+  year.insertAdjacentHTML("beforeEnd", html);
 }
 
 insertDate(20);
