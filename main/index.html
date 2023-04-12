@@ -24,7 +24,7 @@
             <div id="main">
               <div id="model" class="row select">
                 <label for="select-model">Car model</label>
-                <select name="" onChange="changeImage(this);">
+                <select name="" onChange="changeImage(this);" id="select-model">
                   <option value="bmw">BMW</option>
                   <option value="lamborghini">lamborghini</option>
                   <option value="porsche">porsche</option>
@@ -39,12 +39,12 @@
                 </select>
               </div>
               <div id="checkbox">
-               <span>type?</span>
+               <span>Insurance type?</span>
                <div id="checkbox1" class="row">
                 <input type="radio" name="radiobox" id="simple">
-                <label for="simple">simple</label><br>
+                <label for="simple">Simple</label><br>
                 <input type="radio" name="radiobox" id="comprehensive" checked="checked">
-                <label for="comprehensive">comprehensive </label>
+                <label for="comprehensive">Full </label>
                </div>
               </div>
               <div id='button' class="row">
@@ -52,13 +52,13 @@
               </div>
             </div>
             <div id="result">
-              <h4 id="result-title">result</h4>
+              <h4 id="result-title">Result</h4>
               <div id="userdata">
-                <span>✔ Car : Pride</span>
-                <span>✔ Year : 1400</span>
-                <span>✔ Type : simple</span>
+                <span id="user-car"></span>
+                <span id="user-year"></span>
+                <span id="user-type"></span>
               </div>
-              <div id="cost"><span>356554t</span></div>
+              <div id="cost"><span></span></div>
             </div>
           </div>
 
