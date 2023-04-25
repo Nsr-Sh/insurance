@@ -14,10 +14,38 @@ function changeImage(element) {
     "assets/" + "images/" + element.value + ".png";
 }
 // ------
+// Function convertEn
+// convert persian & arabic numbers to english
+function convertEn(strNum) {
+  const mapNum = {
+    "۰": "0",
+    "۱": "1",
+    "۲": "2",
+    "۳": "3",
+    "٤": "4",
+    "۴": "4",
+    "٥": "5",
+    "۵": "5",
+    "٦": "6",
+    "۶": "6",
+    "۷": "7",
+    "۸": "8",
+    "۹": "9",
+  };
+
+  let strArr = Array.from(strNum);
+  for (const [key, value] of Object.entries(mapNum)) {
+    strArr = strArr.map((i) => (i === key ? (i = value) : i));
+  }
+  return strArr.join("");
+}
+// console.log(convertEn("٤۸۷٥۳٥۱۲۳"));
+
 // tabdile sale miladi be shamsi
 function dateConvertor() {
-  return (shamsiDate = new Date().getFullYear() - 621);
+  return (shamsiDate = new Date().toLocaleString("fa-ir").slice(0, 4));
 }
+// console.log(dateConvertor());
 
 // tolide yek range az adad ba dadane adade ebtdaei va tedad(tool)
 function createRange(start, length) {
@@ -31,7 +59,7 @@ function createRange(start, length) {
 
 let html = "";
 function insertDate(length) {
-  const shamsiYear = dateConvertor();
+  const shamsiYear = convertEn(dateConvertor());
   const rangeArray = createRange(shamsiYear, length);
   rangeArray.forEach((item) => {
     html += `<option value="${item}">${item}</option>`;
