@@ -58,8 +58,9 @@ function createRange(start, length) {
 // khoroji:darje option az emsal ta n sale ghable(n:lenght dade shode be onvane vorodi)
 
 let html = "";
+let shamsiYear;
 function insertDate(length) {
-  const shamsiYear = convertEn(dateConvertor());
+  shamsiYear = convertEn(dateConvertor());
   const rangeArray = createRange(shamsiYear, length);
   rangeArray.forEach((item) => {
     html += `<option value="${item}">${item}</option>`;
@@ -85,7 +86,7 @@ class Factor {
   }
 
   yearIncrease(val = 2) {
-    const diff = 1402 - this.year;
+    const diff = shamsiYear - this.year;
     return (this.price = this.price + (this.price * diff * val) / 100);
   }
 
